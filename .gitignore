@@ -27,7 +27,5 @@ dist-ssr
 .env.local
 .env.production
 
-# Documentation files (exclude from GitHub)
-*.md
+# Documentation (exclude from GitHub)
 API_MAPPING.md
-README.md
