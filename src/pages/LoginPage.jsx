@@ -44,7 +44,7 @@ const LoginPage = () => {
         <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-4">
           <BookOpen className="text-primary-600" size={32} />
         </div>
-        <h1 className="text-2xl font-bold text-gray-900">INDKESTAT</h1>
+        <h1 className="text-2xl font-bold text-gray-900">INDEKSTAT</h1>
         <p className="text-sm text-gray-500 mt-1">Sistem Perpustakaan</p>
       </div>
 

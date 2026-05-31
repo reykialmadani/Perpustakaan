@@ -11,7 +11,6 @@ const api = axios.create({
   timeout: 30000,
 })
 
-// Request interceptor: attach Bearer token
 api.interceptors.request.use(
   (config) => {
     const token = storage.getToken()
@@ -23,13 +22,11 @@ api.interceptors.request.use(
   (error) => Promise.reject(error),
 )
 
-// Response interceptor: handle 401 (token expired/invalid)
 api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
       storage.clearAll()
-      // Hindari redirect saat di halaman login
       if (!window.location.pathname.includes('/login')) {
         window.location.href = '/login'
       }

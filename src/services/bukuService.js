@@ -1,6 +1,5 @@
 import api from './api'
 
-// Public buku
 export const bukuService = {
   getAll: async () => {
     const { data } = await api.get('/buku')
@@ -12,7 +11,6 @@ export const bukuService = {
   },
 }
 
-// Jenis Buku (Categories)
 export const jenisBukuService = {
   getAll: async (q = '') => {
     const url = q ? `/admin/buku/jenbuk?q=${encodeURIComponent(q)}` : '/admin/buku/jenbuk'
@@ -39,7 +37,6 @@ export const jenisBukuService = {
   },
 }
 
-// Penerbit Buku (Publishers)
 export const penerbitBukuService = {
   getAll: async (q = '') => {
     const url = q ? `/admin/buku/penbuk?q=${encodeURIComponent(q)}` : '/admin/buku/penbuk'
@@ -66,7 +63,6 @@ export const penerbitBukuService = {
   },
 }
 
-// Penulis Buku (Authors)
 export const penulisBukuService = {
   getAll: async (q = '') => {
     const url = q ? `/admin/buku/author?q=${encodeURIComponent(q)}` : '/admin/buku/author'

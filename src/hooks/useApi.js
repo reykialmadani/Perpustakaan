@@ -1,9 +1,5 @@
 import { useState, useCallback } from 'react'
 
-/**
- * Generic hook untuk API calls dengan loading/error state.
- * @param {Function} apiFn - fungsi service yang dipanggil
- */
 export const useApi = (apiFn) => {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(false)

@@ -23,7 +23,6 @@ const navItems = [
 const Sidebar = ({ open, onClose }) => {
   return (
     <>
-      {/* Overlay mobile */}
       {open && (
         <div
           className="fixed inset-0 z-40 bg-black/50 md:hidden"
@@ -31,7 +30,6 @@ const Sidebar = ({ open, onClose }) => {
         />
       )}
 
-      {/* Sidebar */}
       <aside
         className={`
           fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-200 transform transition-transform duration-200 ease-in-out
@@ -39,9 +37,8 @@ const Sidebar = ({ open, onClose }) => {
           ${open ? 'translate-x-0' : '-translate-x-full'}
         `}
       >
-        {/* Header */}
         <div className="flex items-center justify-between h-16 px-4 border-b border-gray-200">
-          <h1 className="text-xl font-bold text-primary-700">INDKESTAT</h1>
+          <h1 className="text-xl font-bold text-primary-700">INDEKSTAT</h1>
           <button
             onClick={onClose}
             className="md:hidden p-1 rounded-lg hover:bg-gray-100"
@@ -50,7 +47,6 @@ const Sidebar = ({ open, onClose }) => {
           </button>
         </div>
 
-        {/* Navigation */}
         <nav className="p-4 space-y-1">
           {navItems.map((item) => (
             <NavLink
